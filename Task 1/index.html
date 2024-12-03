@@ -10,20 +10,19 @@
     <div class="container">
         <h1>Todo List</h1>
         <div class="form">
-            <input type="text"  id="todoName" placeholder="Enter Todo Name">
-            <input type="text"  id="todoDesc" placeholder="Enter Todo Description">
-            <!-- <textarea  id="todoDesc" placeholder="Enter Todo Description"></textarea> -->
+            <input type="text" id="todoName" placeholder="Enter Todo Name">
+            <input type="text" id="todoDesc" placeholder="Enter Todo Description">
             <button class="addBtn" onclick="addTodo()">Add</button>
         </div>
 
         <div class="filters">
-            <button class="filterBtn"  value="all">All</button>
-            <button class="filterBtn" value="pending">Pending</button>
-            <button class="filterBtn"  value="completed">Completed</button>
+            <button class="filterBtn" value="all" onclick="filterTodos('all')">All</button>
+            <button class="filterBtn" value="pending" onclick="filterTodos('pending')">Pending</button>
+            <button class="filterBtn" value="completed" onclick="filterTodos('completed')">Completed</button>
         </div>
 
         <ul id="todoList"></ul>
     </div>
-</body>
-<script src="script.js"></script>
+
+    <script src="script.js"></script>
 </html>

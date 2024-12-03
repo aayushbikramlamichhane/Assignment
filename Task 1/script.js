@@ -1,7 +1,6 @@
 const todoList = document.getElementById('todoList');
 const addBtn = document.querySelector('.addBtn');
-const filterBtn = document.querySelectorAll('.filterBtn');
-
+const filterButtons = document.querySelectorAll('.filterBtn');
 
 // loading todos
 function loadTodos() {
@@ -40,6 +39,7 @@ function displayTodos(filter = 'all') {
 }
 
 
+
 // function to update status
 function updateStatus(index) {
     todos[index].status = 'completed';
@@ -56,7 +56,6 @@ function addTodo() {
         alert("Please fill out required fields");
         return;
     }
-
     todos.push({ name: todoName, description: todoDesc, status: 'pending' });
     localStorage.setItem('todos', JSON.stringify(todos));
     displayTodos();
@@ -68,7 +67,6 @@ function addTodo() {
 function editTodo(index) {
     const todo = todos[index];
     const todoItem = document.querySelectorAll('.todoItem')[index];
-
     todoItem.innerHTML = `
         <div>
             <input type="text" id="editName${index}" value="${todo.name}" />
@@ -80,7 +78,6 @@ function editTodo(index) {
         </div>
     `;
 }
-
 
 // function to save todos
 function saveEdit(index) {
@@ -104,13 +101,17 @@ function deleteTodo(index) {
     displayTodos();
 }
 
-
-filterBtn.forEach(button => {
-    button.addEventListener('click', () => {
-        const filter = button.getAttribute('value');
-        displayTodos(filter);
+// Function to filter todos and highlight active button
+function filterTodos(filter) {
+    // Remove active class from all filter buttons
+    filterButtons.forEach(btn => {
+        btn.classList.remove('active');
     });
-});
-
-// Initial display
-displayTodos();
+    // Add active class to clicked button
+    const filterBtn = document.querySelector(`.filterBtn[value="${filter}"]`);
+    filterBtn.classList.add('active');
+    // Display filtered todos
+    displayTodos(filter);
+}
+// Initial display with 'All' filter active
+filterTodos('all');
