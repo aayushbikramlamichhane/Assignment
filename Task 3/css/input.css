@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 25px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 90vh;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.input-id,
+.input-name,
+.input-address,
+.input-contact{
+    margin-bottom: 10px;
+    font-size: 5px;
+}
+
+input{
+    /* font-size: 3.5em; */
+    height: 2em;
+    /* width: 15em; */
+    padding: 5px;
+    font-size: medium;
+    border: 1px solid black;
+}
+
+input::placeholder{
+    color: black;
+}
+
+.add{
+    cursor: pointer;
+    height: 2em;
+    width: 3em;
+}

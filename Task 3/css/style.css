@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.info-container{
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.fields{
+    /* border: 2px solid red; */
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+/* .fields{ */
+    /* position: relative; */
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* border: 1px solid red; */
+    /* justify-content: space-around; */
+    /* margin-bottom: 10px; */
+/* } */
+
+/* .fields .search-fields{
+    position: absolute;
+    left: 22rem;
+    top: 1rem;
+}
+.fields .add-fields{
+    position: relative;
+    top: 1rem;
+    left: 18rem;
+} */
+
+.fields .add-fields .add-users{
+    text-decoration: none;
+    color: white;
+}
+
+table {
+    width: 50%;
+    margin: 5px auto;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    color: black;
+}
