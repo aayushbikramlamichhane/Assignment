@@ -1,6 +1,4 @@
-
-
-import {  tableBody } from "../Variable/variable.js";
+import { tableBody } from "../Variable/variable.js";
 
 export function resetBody() {
     tableBody.innerHTML = "Table Is Empty";

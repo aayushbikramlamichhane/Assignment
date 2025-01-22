@@ -1,4 +1,3 @@
-
 export const id = document.querySelector(".inputId");
 export const name = document.querySelector(".inputName");
 export const address = document.querySelector(".inputAddress");
