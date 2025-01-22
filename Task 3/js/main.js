@@ -8,3 +8,7 @@ reset.addEventListener('click', () => {
     resetBody();
 })
 
+const addUser = document.querySelector(".add-users");
+addUser.addEventListener("click", () => {
+    window.location.href = "../html/input.html"
+})

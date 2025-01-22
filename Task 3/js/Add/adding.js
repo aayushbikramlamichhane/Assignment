@@ -1,4 +1,3 @@
-// import users from "../users.js";
 import { localUser } from "../Localstorage/localstorage.js";
 import { displayUsers } from "../display.js";
 import { id, name, address, contact, tableBody } from "../Variable/variable.js";
@@ -16,7 +15,7 @@ export function newUser() {
         id: id.value,
         name: name.value,
         address: address.value,
-        contactNumber: contact.value,
+        contact: contact.value,
     });
 
     localStorage.setItem("localUser", JSON.stringify(localUser));

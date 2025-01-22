@@ -9,6 +9,7 @@ body{
     margin-top: 25px;
     background: lightgray;
 }
+
 .wrapper{
     display: flex;
     flex-direction: column;
@@ -26,11 +27,8 @@ body{
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    flex-wrap: wrap;
     background: wheat;
 }
-
-
 
 .input-id,
 .input-name,
@@ -59,12 +57,12 @@ input::placeholder{
     justify-content: space-between;
     height: 15%;
     width: 50%;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     /* border: 2px solid red; */
 }
 
-.add{
-    background-color: rgb(90, 90, 225); 
+.saveButton{
+    background-color: #4CAF50; 
     border: none;
     border-radius: 5px;
     color: white;
@@ -77,8 +75,8 @@ input::placeholder{
     cursor: pointer;
 }
 
-.add:hover{   
-    background: rgb(56, 56, 138);
+.saveButton:hover{
+    background-color: #2f7c32;
 }
 
 

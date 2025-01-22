@@ -1,15 +1,13 @@
 import { localUser } from "./Localstorage/localstorage.js";
 import { deleteUser } from "./delete.js";
-import { editUser } from "./edit.js";
 import { tableBody } from "./Variable/variable.js";
-
+import { editUsers } from './Edit/edit.js'
 
 export function displayUsers() {
   if (!tableBody) {
     return;
   }
   
-
   if (localUser.length === 0) {
     tableBody.innerHTML = "Table is Empty";
     tableBody.style.fontStyle = "Arial";
@@ -23,27 +21,31 @@ export function displayUsers() {
       tableId.textContent = user.id;
       row.appendChild(tableId);
 
-      const username = document.createElement("td");
-      username.textContent = user.name;
-      row.appendChild(username);
+      const name = document.createElement("td");
+      name.textContent = user.name;
+      row.appendChild(name);
 
       const address = document.createElement("td");
       address.textContent = user.address;
       row.appendChild(address);
 
-      const contactNumber = document.createElement("td");
-      contactNumber.textContent = user.contactNumber;
-      row.appendChild(contactNumber);
+      const contact = document.createElement("td");
+      contact.textContent = user.contact;
+      row.appendChild(contact);
 
       const editButton = document.createElement("button");
       editButton.textContent = "Edit";
+      editButton.className = "editButton";
+
       editButton.addEventListener("click", () => {
-        editUser(index);
+        window.location.href = `save.html?index=${index}`;
       });
 
       const deleteButton = document.createElement("button");
       deleteButton.textContent = "Delete";
+      deleteButton.className = "delete";
       deleteButton.addEventListener("click", () => {
+        // console.log(index);
         deleteUser(index);
       });
 
@@ -54,3 +56,5 @@ export function displayUsers() {
     });
   }
 }
+
+
