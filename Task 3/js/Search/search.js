@@ -1,8 +1,7 @@
 
 export function filterTable() {
     const searchInput = document.querySelector('.search');
-    const table = document.querySelector('table');
-    const rows = table.querySelectorAll('tbody tr');
+    const rows = document.querySelectorAll('tbody tr');
 
     searchInput.addEventListener('input',  () => {
         const value = searchInput.value.toLowerCase();
