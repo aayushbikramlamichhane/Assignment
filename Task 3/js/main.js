@@ -1,5 +1,6 @@
 import { displayUsers } from './display.js';
 import { resetBody } from './Reset/reset.js';
+import { filterTable } from './Search/search.js';
 
 displayUsers();
 
@@ -10,5 +11,7 @@ reset.addEventListener('click', () => {
 
 const addUser = document.querySelector(".add-users");
 addUser.addEventListener("click", () => {
-    window.location.href = "../html/input.html"
+    window.location.href = "../html/input.html";
 })
+
+filterTable()

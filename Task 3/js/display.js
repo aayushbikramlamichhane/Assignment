@@ -1,7 +1,6 @@
 import { localUser } from "./Localstorage/localstorage.js";
 import { deleteUser } from "./delete.js";
 import { tableBody } from "./Variable/variable.js";
-import { editUsers } from './Edit/edit.js'
 
 export function displayUsers() {
   if (!tableBody) {
@@ -38,7 +37,8 @@ export function displayUsers() {
       editButton.className = "editButton";
 
       editButton.addEventListener("click", () => {
-        window.location.href = `save.html?index=${index}`;
+        // window.location.href = `.../edit.html?index=${index}`;
+        window.location.href = `../html/save.html?index=${index}`;
       });
 
       const deleteButton = document.createElement("button");

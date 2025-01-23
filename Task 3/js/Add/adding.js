@@ -1,6 +1,6 @@
 import { localUser } from "../Localstorage/localstorage.js";
 import { displayUsers } from "../display.js";
-import { id, name, address, contact, tableBody } from "../Variable/variable.js";
+import { id, name, address, contact } from "../Variable/variable.js";
 import { resetInputFields } from "../Reset/resetInputFields.js";
 
 
