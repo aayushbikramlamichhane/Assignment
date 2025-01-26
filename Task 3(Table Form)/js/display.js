@@ -6,7 +6,7 @@ export function displayUsers() {
   if (!tableBody) {
     return;
   }
-  
+
   if (localUser.length === 0) {
     tableBody.innerHTML = "Table is Empty";
     tableBody.style.fontStyle = "Arial";
@@ -56,5 +56,3 @@ export function displayUsers() {
     });
   }
 }
-
-

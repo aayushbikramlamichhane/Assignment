@@ -1,10 +1,6 @@
 import { id,name,address,contact } from "../Variable/variable.js"
 import { localUser } from "../Localstorage/localstorage.js";
 
-
-
-
-
 export function editUsers() {
     const urlParams = new URLSearchParams(window.location.search);
     console.log(urlParams);
