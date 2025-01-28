@@ -6,14 +6,13 @@ const signInButton = document.querySelector(".signin");
 const passwordError = document.querySelector(".pass-error");
 const emailError = document.querySelector(".email-error");
 
+const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+const strongPasswordRegex =/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
 signInButton.addEventListener("click", (event) => {
-    // event.preventDefault();
     const emailInput = inputEmail.value.trim();
     const passwordInput = inputPassword.value.trim();
-    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    const strongPasswordRegex =
-        /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-    
+    // event.preventDefault();
     let isValid = true;
     
     if (!emailInput || !emailRegex.test(emailInput)) {
@@ -32,4 +31,18 @@ signInButton.addEventListener("click", (event) => {
 
     if(isValid){
     window.location.href = "valid.html"}
+});
+
+inputEmail.addEventListener("input", (e) => {
+    if (emailRegex.test(inputEmail.value)) {
+        console.log(emailRegex.test(inputEmail.value));
+        emailError.innerHTML = "";
+    }
+});
+
+
+inputPassword.addEventListener("input", () => {
+    if (strongPasswordRegex.test(inputPassword.value)) {
+        passwordError.innerHTML = "";
+    }
 });
