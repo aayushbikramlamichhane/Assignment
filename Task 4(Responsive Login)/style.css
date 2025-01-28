@@ -34,7 +34,7 @@
     /* justify-content: space-between; */
     flex-direction: column;
     padding: 48px;
-    /* width: 27%; */
+    width: 27%;
 }
 
 .main{
@@ -117,7 +117,13 @@ input{
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
 }
-
+.email-error{
+    position: relative;
+    left: 25px;
+    top: 4px;
+    color: red;
+    font-size: small;
+}
 
 .password-field {
     display: flex;
@@ -154,6 +160,13 @@ input{
     right: 7px;
 }
 
+.pass-error{
+    position: relative;
+    left: 25px;
+    top: 4px;
+    color: red;
+    font-size: small;
+}
 
 .remember-field{
     display: flex;
@@ -194,6 +207,7 @@ input{
     border-radius: 6px;
     background: #007AFF;
     color: white;
+    cursor: pointer;
 }
 
 .signup-field .signup{
@@ -224,6 +238,7 @@ input{
     text-align: center;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
+    cursor: pointer;
 }
 
 .footer{
