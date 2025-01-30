@@ -1,0 +1,372 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.wrapper {
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+.container1 {
+    height: 100vh;
+    width: 73%;
+    /* border: 2px solid red; */
+    /* background: url("../img/Rectangle 2756.png") no-repeat; */
+    /* border-radius: 24px 0px 0px 24px; */
+}
+
+.container1 img{
+    height: 100%;
+    width: 100%;
+    border-radius: 24px 0px 0px 24px;
+}
+
+.container2{
+    display: flex;
+    /* justify-content: space-between; */
+    flex-direction: column;
+    padding: 48px;
+    width: 27%;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    /* display: none; */
+    /* visibility: hidden; */
+}
+
+.header{
+    display: flex;
+    align-items: center;
+}
+
+.header img{
+    width: 48px;
+    height: 48px;
+    margin-right: 9.6px;
+}
+
+.header h3{
+    height: 14.45px;
+}
+
+.section{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.main-field{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.fields{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.input-fields{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.email-field{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+label{
+    height: 15px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+input{
+    width: 100%;
+    height: 48px;
+    border-radius: 6px;
+    background: hsl(0, 1%, 86%);
+    color: hsl(0, 1%, 86%);
+    padding: 8px 8px 8px 16px ;
+    color: black;
+    border: none;
+    outline: 1px solid black;
+}
+
+input:hover{
+    outline: 1.5px solid blue;
+}
+
+
+
+.email-field .login{
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 12px;
+    letter-spacing: 0.30000001192092896px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+
+.password-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.password-field .password {
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 12px;
+    letter-spacing: 0.30000001192092896px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+.password-input{
+    /* display: flex;
+    justify-content: space-around; */
+    /* width: 100%; */
+    position: relative;
+}
+
+.password-input input{
+    padding: 10px;
+}
+
+.password-input i{
+    position: absolute;
+    width: 16px;
+    height: 10.91px;
+    top: 18px;
+    right: 7px;
+    cursor: pointer;
+}
+
+.remember-field{
+    display: flex;
+    justify-content: space-between;
+    height: 20px;
+    gap: 16px;
+}
+.field-remember{
+    display: flex;
+    gap: 8px;
+}
+
+.field-remember .icon i{
+    position: relative;
+    top: 2px;
+    cursor: pointer;
+}
+
+.remember span{
+    
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.30000001192092896px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+.link a{
+    
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.30000001192092896px;
+    text-align: right;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+.button .signin{
+    width: 100%;
+    padding: 10px 24px 10px 24px;
+    border-radius: 6px;
+    background: #007AFF;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+.button .signin:hover{
+    background: #034b98;
+}
+
+.signup-field .signup{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 16px 10px 16px;
+    border-radius: 6px;
+    background: black;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+.signup-field .signup:hover{
+    background: rgba(0, 0, 0, 0.731);
+}
+
+
+.signup-field .signup img{
+    width: 19.74px;
+    height: 20px;
+    left: 0.13px;
+}
+.signup-field .signup span{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.30000001192092896px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    cursor: pointer;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.footer span{
+    /*  */
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.30000001192092896px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+.footer a{
+        /*  */
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0.30000001192092896px;
+        text-align: right;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+}
+
+/* .loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 40%;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    z-index: 1000;
+    display: none;
+} */
+/* .loader {
+    position: fixed;
+    top: 40%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid blue;
+    border-right: 16px solid green;
+    border-bottom: 16px solid red;
+    width: 200px;
+    height: 200px;
+    animation: spin 2s linear infinite;
+    display: none;
+}
+
+
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} */
+
+
+
+/* .toast-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    width: 30%;
+    height: 20%;
+    display: none;
+}
+
+.main-toast{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 70px;
+}
+.field{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.img{
+    height: auto;
+    width:  100%;
+    object-fit: contain;
+}
+
+i{
+    cursor: pointer;
+} */
+@media only screen and (min-device-width: 320px) and (max-device-width: 800px) {
+    .container1{
+        display: none;
+    }
+    .container2 {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+}
