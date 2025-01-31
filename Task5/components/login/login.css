@@ -17,7 +17,7 @@
 
 .container1 {
     height: 100vh;
-    width: 73%;
+    width: 70%;
     /* border: 2px solid red; */
     /* background: url("../img/Rectangle 2756.png") no-repeat; */
     /* border-radius: 24px 0px 0px 24px; */
@@ -31,10 +31,9 @@
 
 .container2{
     display: flex;
-    /* justify-content: space-between; */
     flex-direction: column;
     padding: 48px;
-    width: 27%;
+    width: 30%;
 }
 
 .main{
@@ -91,10 +90,16 @@
     flex-direction: column;
     gap: 8px;
 }
+.email-error{
+    position: relative;
+    top: 4px;
+    color: red;
+    font-size: 11px;
+}
 
 label{
     height: 15px;
-    padding-left: 16px;
+    /* padding-left: 16px; */
     padding-right: 16px;
 }
 
@@ -148,6 +153,12 @@ input:hover{
     justify-content: space-around; */
     /* width: 100%; */
     position: relative;
+}
+.pass-error{
+    position: relative;
+    top: 4px;
+    color: red;
+    font-size: 11px;
 }
 
 .password-input input{

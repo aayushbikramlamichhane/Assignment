@@ -3,47 +3,81 @@
     display: flex;
     align-items: center;
     background: white;
-    border-radius: 20px;
+    border-radius: 3rem;
+    height: 70px;
     padding: 10px 15px;
     border: 1px solid #ddd;
     position: fixed;
     z-index: 1000;
-    bottom: 0;
-    right: 5px;
-    animation: slide 3s;
-    gap: 30px;
-    display: none;
+    bottom: 2rem;
+    right: 2rem;
+    gap: 0.5rem;
+    animation: slide 100ms;  
+    display: none; 
 }
 
-
-.field {
+.toast-field {
+    position: relative;
     display: flex;
     align-items: center;
-    gap: 10px;
-    /* flex-grow: 1; */
+    gap: 1rem;
+    right: 9px;
 }
 
-.field img {
-    width: 30px;
-    height: 30px;
+.toast-icon{
+    display: flex;
+    width: 60px;
+    height: 60px;
+    background: rgb(225 208 208);
+    border-radius: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
-.field h3 {
+.toast-field h3 {
     font-size: 14px;
     color: #333;
     font-weight: 600;
     /* margin: 0; */
 }
 
-.icon {
+.cross-icon {
     cursor: pointer;
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+}
+.toast-info{
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.toast-info .toast-header{
+    color: red;
+    font-weight: bold;
+}
+
+.toast-info .toast-message{
+    font-size: small;
+}
+
+
+.toast-info h2{
+    position: relative;
+    color: red;
+}
+
+#icon-danger{
+    color: #e92b2b;
+    font-size: x-large;
 }
 
 #icon-cross {
-    font-size: 15px;
+    font-size: 1rem;
     color: #999;
     transition: color 0.3s;
 }
@@ -53,5 +87,5 @@
 }
 
 @keyframes slide {
-    100% { right: 100px; }
+    100% { right:50px; }
 }

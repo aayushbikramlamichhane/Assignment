@@ -9,5 +9,3 @@ export function displayToast() {
     // console.log(document.querySelector(".toast-container"));
 
 }
-// icon.addEventListener("click", displayToast)
-// const icon = document.getElementById("icon")

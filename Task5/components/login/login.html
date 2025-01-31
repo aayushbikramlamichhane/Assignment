@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Form</title>
     <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="../../assests/css/styles.css">
     <link rel="stylesheet" href="../../assests/css/loader.css">
     <link rel="stylesheet" href="../../assests/css/toast.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -15,21 +16,29 @@
 
 <body>
     <div class="wrapper">
+        <!-- Toast Component -->
+        <div class="main-toast">
+            <div class="toast-field">
+                <!-- <img src="/assests//images/Avatar-UI-Unicorn-V2.png" alt=""> -->
+                <div class="toast-icon">
+                    <i class="fa-solid fa-triangle-exclamation" id="icon-danger"></i>
+                </div>
+                <div class="toast-info">
+                    <!-- <span class="toast-header">Error!</span>
+                    <span class="toast-message">Invalid User or Password</span> -->
+                </div>
+            </div>
+            <div class="cross-icon">
+                <i class="fa-solid fa-xmark" id="icon-cross"></i>
+            </div>
+        </div>
         <div class="container">
             <div class="container1">
                 <img src="/assests/images/Rectangle 2756.png" alt="">
             </div>
 
             <div class="container2">
-                <div class="main-toast">
-                    <div class="field">
-                        <img src="/assests//images/Avatar-UI-Unicorn-V2.png" alt="">
-                        <h3>Invalid Email or Password</h3>
-                    </div>
-                    <div class="icon">
-                        <i class="fa-solid fa-xmark" id="icon-cross"></i>
-                    </div>
-                </div>
+                
                 <div class="main">
                     <div class="header">
                         <img src="/assests/images/Avatar-UI-Unicorn-V2.png" alt="">
@@ -51,6 +60,7 @@
 
                                         <div class="login-input">
                                             <input type="text" placeholder="Email or Phone Number" class="input-email">
+                                            <span class="email-error"></span>
                                         </div>
                                     </div>
                                     <div class="password-field">
@@ -62,6 +72,7 @@
                                             <input type="password" placeholder="Enter password" class="input-password">
                                             <!-- <img src="../img/Vector.png" alt=""> -->
                                             <i class="fa-solid fa-eye"></i>
+                                            <span class="pass-error"></span>
                                         </div>
                                     </div>
 
@@ -117,6 +128,6 @@
 <script type="module" src="../../assests/js/loader.js"></script>
 <script type="module" src="../../assests/js/toast.js"></script>
 <script type="module" src="../../assests/js/session.js"></script>
-<script type="module" src="../home/home.js"></script>
+<!-- <script type="module" src="../home/home.js"></script> -->
 
 </html>

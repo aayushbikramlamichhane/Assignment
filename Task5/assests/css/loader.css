@@ -8,7 +8,7 @@
     border-top: 16px solid #3498db;
     width: 250px;
     height: 250px;
-    animation: spin 2s linear infinite;
+    animation: spin 2s ;
     display: none;
 }
 
