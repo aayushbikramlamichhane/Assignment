@@ -13,6 +13,7 @@ console.log(userName);
 const index = userName.indexOf("@");
 // console.log(index);
 const firstName = userName.slice(0, index);
+
 // console.log(firstName);
 
 

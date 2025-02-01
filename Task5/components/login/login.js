@@ -8,7 +8,8 @@ import {
   passwordError,
 } from "/assests/js/variable.js";
 
-import { loaderDisplay } from "../../assests/js/loader.js";
+
+import { loaderDisplay, loaderHide } from "../../assests/js/loader.js";
 
 import {
   displayToast,
@@ -32,7 +33,8 @@ signInButton.addEventListener("click", () => {
   function setInvalidToast(message) {
     isValid = false;
     
-    displayToast("ERROR!",message,false);
+    displayToast("ERROR!", message, false);
+    crossHit();
     setTimeout(() => {
       hideToast();
     }, 3000);
@@ -64,12 +66,14 @@ signInButton.addEventListener("click", () => {
       // console.log("hitted");
       crossHit();
       setTimeout(() => {
-        window.location = `/components/home/home.html`;
+        loaderHide();
+        const message = "Welcome, User";
+        displayToast("SUCCESS!", message, true);
+        // console.log("Hello");
+        
         setTimeout(() => {
-          const message = "Welcome";
-          displayToast("SUCCESS!", message, true);
-          console.log("Hello");
-        }, 3000);
+          window.location = `/components/home/home.html`;
+        }, 1000);
       }, 2000);
       
     } else {
