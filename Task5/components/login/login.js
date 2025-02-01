@@ -16,7 +16,7 @@ import {
   crossHit,
 } from "../../assests/js/toast.js";
 
-
+const eyeIcon = document.getElementById("eye-icon");
 const container1 = getQuerySelection(".container1");
 const containerMain = document.querySelector(".main");;
 
@@ -96,5 +96,17 @@ inputEmail.addEventListener("input", (e) => {
 inputPassword.addEventListener("input", () => {
   if (inputPassword.value.length > 6) {
     passwordError.innerHTML = "";
+  }
+});
+
+eyeIcon.addEventListener("click", () => {
+  if (inputPassword.type === "password") {
+    inputPassword.setAttribute("type", "text");
+    eyeIcon.classList.remove("fa-eye");
+    eyeIcon.classList.add("fa-eye-slash");
+  } else {
+    inputPassword.setAttribute("type", "password");
+    eyeIcon.classList.remove("fa-eye-slash");
+    eyeIcon.classList.add("fa-eye");
   }
 });
