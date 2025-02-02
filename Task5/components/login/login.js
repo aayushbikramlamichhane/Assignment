@@ -37,15 +37,23 @@ signInButton.addEventListener("click", () => {
   }
 
   if (!emailInput || !emailRegex.test(emailInput)) {
-    emailError.innerHTML = "Invalid Email";
-    const errorMessage = "Enter Valid Email";
+    if (!emailInput) {
+      emailError.innerHTML = "Email Required"
+    } else {
+      emailError.innerHTML = "Invalid Email"
+    }
+    const errorMessage = "Enter Valid Email or Password";
     setInvalidToast(errorMessage);
   } else {
     emailError.innerHTML = "";
   }
 
   if (!passwordInput || passwordInput.length < 6) {
-    passwordError.innerHTML = "Invalid Password";
+    if (!passwordInput) {
+      passwordError.innerHTML = "Password Required"
+    } else {
+      passwordError.innerHTML = "Invalid Password"
+    }
     const errorMessage = "Invalid Email or Password";
     setInvalidToast(errorMessage);
   } else {
