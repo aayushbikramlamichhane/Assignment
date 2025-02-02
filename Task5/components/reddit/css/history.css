@@ -1,0 +1,81 @@
+.history{
+    margin: 0.5rem;
+    padding: 0.3rem;
+    /* border: 1px solid black; */
+    width: 23%;
+    height: 27%;
+    margin-left: -4px;
+    padding: 10px;
+}
+
+.history-post{
+    border: none;
+    background: rgb(228, 234, 238);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.posts{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.posts span{
+    font-size: small;
+}
+
+.posts .recent{
+    color: gray;
+}
+.posts .clear{
+    color: blue;
+}
+
+
+.history-head{
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.history-head .history-icon{
+    background: rebeccapurple;
+    width: 8%;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.span-content{
+    color: gray;
+}
+
+.main-history{
+    color: grey;
+    margin-bottom: 0.5rem;
+}
+
+.history-footer{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: gray;
+    font-size: small;
+}
+
+.upvotes{
+    display: flex;
+    gap: 3px;
+}
+
+.upvote-break{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.history-comments{
+    display: flex;
+    gap: 3px;
+}

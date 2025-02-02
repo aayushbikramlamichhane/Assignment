@@ -1,0 +1,88 @@
+.section{
+    display: flex;
+    height: 100vh;
+}
+
+.navbar{
+    margin: 0.5rem;
+    padding: 0.3rem;
+    /* border: 1px solid black; */
+    width: 20%;
+    height: 30%;
+    margin-right: 2px;
+    overflow: hidden;
+}
+
+.home{
+    display: flex;
+    gap: 10px;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.home:hover{
+    background: rgb(228, 234, 238);
+}
+
+
+.popular{
+    display: flex;
+    gap: 10px;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.popular:hover{
+    background: rgb(228, 234, 238);
+}
+
+.explore{
+    display: flex;
+    gap: 10px;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.explore:hover{
+    background: rgb(228, 234, 238);
+}
+
+.feed{
+    display: flex;
+    gap: 10px;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    background: rgb(228, 234, 238)
+}
+/* .feed:hover{
+    background: rgb(228, 234, 238);
+} */
+
+.footer{
+    margin-top: 3px;
+    width: 100%;
+
+}
+
+.footer-content{
+    width: 11%;
+    background: rgb(228, 234, 238);
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 7px;
+    border: none;
+    border-radius: 5px;
+}
+.footer-content i{
+    width: 15px;
+    /* height: 15px; */
+    cursor: pointer;
+    /* color: gold; */
+}

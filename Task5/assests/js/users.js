@@ -8,4 +8,7 @@ export const users = [
     {
         email: "aayush@gmail.com", password: 'aayush1'
     },
+    {
+        email: "rajanthapa@gmail.com", password: '1234567'
+    }
 ]

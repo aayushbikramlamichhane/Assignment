@@ -66,13 +66,23 @@ signInButton.addEventListener("click", () => {
       // console.log("hitted");
       crossHit();
       setTimeout(() => {
+        let user = sessionStorage.getItem("user")
+          ? JSON.parse(sessionStorage.getItem("user"))
+          : [];
+
+        let userName = user.user;
+
+        const index = userName.indexOf("@");
+        const firstName = userName.slice(0, index);
+
+        
         loaderHide();
-        const message = "Welcome, User";
+        const message = `Welcome, ${firstName}`;
         displayToast("SUCCESS!", message, true);
         // console.log("Hello");
         
         setTimeout(() => {
-          window.location = `/components/home/home.html`;
+          window.location ="/components/reddit/reddit.html";
         }, 1000);
       }, 2000);
       
