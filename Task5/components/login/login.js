@@ -1,4 +1,4 @@
-import { users } from "../../assests/js/users.js";
+import { users } from "../../assets/js/users.js";
 import {
   inputEmail,
   inputPassword,
@@ -6,16 +6,12 @@ import {
   emailRegex,
   emailError,
   passwordError,
-} from "/assests/js/variable.js";
+} from "../../assets/js/variable.js";
 
 
-import { loaderDisplay, loaderHide } from "../../assests/js/loader.js";
+import { loaderDisplay, loaderHide } from "../../assets/js/loader.js";
 
-import {
-  displayToast,
-  hideToast,
-  crossHit,
-} from "../../assests/js/toast.js";
+import { displayToast, hideToast, crossHit } from "../../assets/js/toast.js";
 
 const eyeIcon = document.getElementById("eye-icon");
 const container1 = getQuerySelection(".container1");
