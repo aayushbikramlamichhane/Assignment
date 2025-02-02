@@ -74,10 +74,12 @@ signInButton.addEventListener("click", () => {
 
         const index = userName.indexOf("@");
         const firstName = userName.slice(0, index);
+        const capitalName = firstName.charAt(0).toUpperCase() + firstName.slice(1)
+        console.log(capitalName);
 
         
         loaderHide();
-        const message = `Welcome, ${firstName}`;
+        const message = `Welcome, ${capitalName}`;
         displayToast("SUCCESS!", message, true);
         // console.log("Hello");
         
