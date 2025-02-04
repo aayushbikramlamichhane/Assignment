@@ -1,0 +1,51 @@
+export const feedsData = [
+  {
+    logo: "L",
+    topicContent: "r/Luffy",
+    heading: "Kaizoku ou ni ore wa naru",
+    img: "../../../components/reddit/img/luffy.jpg",
+    like: "600",
+  },
+  {
+    logo: "Z",
+    topicContent: "r/Zoro",
+    heading: "Scars on the back are a swordsman's shame",
+    img: "../../../components/reddit/img/zoro.jpg",
+    like: "700",
+  },
+  {
+    logo: "N",
+    topicContent: "r/Naruto",
+    heading: "Watashi wa hokage ni naru",
+    img: "../../../components/reddit/img/naruto.jpg",
+    like: "500",
+  },
+  {
+    logo: "B",
+    topicContent: "r/Batman",
+    heading: "World only makes sense if you force it to",
+    img: "../../../components/reddit/img/bat.jpg",
+    like: "450",
+  },
+  {
+    logo: "M",
+    topicContent: "r/Maskman",
+    heading: "No one cared until I started wearing mask",
+    img: "../../../components/reddit/img/pexels-photo-1097456 (1).jpg",
+    like: "400",
+  },
+  {
+    logo: "A",
+    topicContent: "r/ManchesterUnited",
+    heading: "Manchester United #ggmu",
+    img: "../../../components/reddit/img/man.jpg",
+    like: "600",
+  },
+  {
+    logo: "O",
+    topicContent: "r/OnePiece",
+    heading: "One Piece is Real",
+    img: "../../../components/reddit/img/onepiece.jpeg",
+    like: "401",
+  },
+];

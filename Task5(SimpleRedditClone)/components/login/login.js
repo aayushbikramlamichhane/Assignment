@@ -1,4 +1,4 @@
-import { users } from "../../assets/js/users.js";
+import { users } from "../../assests/js/users.js";
 import {
   inputEmail,
   inputPassword,
@@ -6,12 +6,16 @@ import {
   emailRegex,
   emailError,
   passwordError,
-} from "../../assets/js/variable.js";
+} from "/assests/js/variable.js";
 
 
-import { loaderDisplay, loaderHide } from "../../assets/js/loader.js";
+import { loaderDisplay, loaderHide } from "../../assests/js/loader.js";
 
-import { displayToast, hideToast, crossHit } from "../../assets/js/toast.js";
+import {
+  displayToast,
+  hideToast,
+  crossHit,
+} from "../../assests/js/toast.js";
 
 const eyeIcon = document.getElementById("eye-icon");
 const container1 = getQuerySelection(".container1");
@@ -37,23 +41,15 @@ signInButton.addEventListener("click", () => {
   }
 
   if (!emailInput || !emailRegex.test(emailInput)) {
-    if (!emailInput) {
-      emailError.innerHTML = "Email Required"
-    } else {
-      emailError.innerHTML = "Invalid Email"
-    }
-    const errorMessage = "Enter Valid Email or Password";
+    emailError.innerHTML = "Invalid Email";
+    const errorMessage = "Enter Valid Email";
     setInvalidToast(errorMessage);
   } else {
     emailError.innerHTML = "";
   }
 
   if (!passwordInput || passwordInput.length < 6) {
-    if (!passwordInput) {
-      passwordError.innerHTML = "Password Required"
-    } else {
-      passwordError.innerHTML = "Invalid Password"
-    }
+    passwordError.innerHTML = "Invalid Password";
     const errorMessage = "Invalid Email or Password";
     setInvalidToast(errorMessage);
   } else {
