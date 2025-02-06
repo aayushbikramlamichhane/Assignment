@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/section.css">
     <link rel="stylesheet" href="./css/feeds.css">
     <link rel="stylesheet" href="./css/history.css">
+    <link rel="stylesheet" href="./css/comment.css">
     <link rel="stylesheet" href="../../assests/css/loader.css">
     <link rel="stylesheet" href="../../assests/css/toast.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -83,8 +84,8 @@
                     <div class="feeds">
                         <div class="main-feeds">
                             <h4>New Feeds</h4>
-                            <!-- <div class="headline"> -->
-                                <!-- <div class="topic">
+                            <!-- <div class="headline">
+                                <div class="topic">
                                     <div class="topic-body">
                                         <span class="span-back"></span>
                                         <span class="span-back">A</span>
@@ -94,14 +95,13 @@
                                     <div class="topic-icon">
                                         <i class="fa fa-ellipsis"></i>
                                     </div>
-                                </div> -->
-                                <!-- <div class="content">
+                                </div>
+                                <div class="content">
                                     <span class="content-title">Manchester United </span>
                                     <span class="content-title"></span>
                                     <img class="content-img" src="./img/man.jpg" alt="">
-                                    <img class="content-img" src="" alt="">
-                                </div> -->
-                                <!-- <div class="footer">
+                                </div>
+                                <div class="footer">
                                     <div class="footer-content" id="footer-content">
                                         <i class="fa-solid fa-arrow-up" id="arrow-up"></i>
                                         <span class = "arrow-span" id="arrow-span">100</span>
@@ -111,99 +111,38 @@
                                         <i class="fa-solid fa-comment"></i>
                                         <span class="comment-count">0</span>
                                     </div>
-                                </div> -->
-                            <!-- </div> -->
-                            <!-- <div class="headline">
-                                <div class="topic">
-                                    <div class="topic-body">
-                                        <span class="span-back">O</span>
-                                        <span class="topic-content">r/OnePiece</span>
-                                    </div>
-                                    <div class="topic-icon">
-                                        <i class="fa fa-ellipsis"></i>
-                                    </div>
                                 </div>
-                                <div class="content">
-                                    <h4>One Piece</h4>
-                                    <img src="./img/onepiece.jpeg" alt="">
-                                </div>
-                                <div class="footer">
-                                    <div class="footer-content" id="footer-content1">
-                                        <i class="fa-solid fa-arrow-up" id="arrow-up1"></i>
-                                        <span class = "arrow-span" id="arrow-span1">100</span>
-                                        <i class='fas fa-arrow-down' id="arrow-down1"></i>
+                                <div class="comment-container">
+                                    <div class="comment-input">
+                                        <input type="text" placeholder="Enter a comment">
+
+                                        <div class="comment-buttons">
+                                            <button class="save-button">Save</button>
+                                            <button class="cancel-button">Cancel</button>
+                                        </div>
                                     </div>
-                                </div>
-                            </div> -->
-                            <!-- <div class="headline">
-                                <div class="topic">
-                                    <div class="topic-body">
-                                        <span class="span-back">B</span>
-                                        <span class="topic-content">r/BatMan</span>
+                                    <div class="comment-body">
+                                        <div class="comment-topic">
+                                            <span class="span-logo">A</span>
+                                            <span class="span-title">r/Aayush</span>
+                                        </div>
+                                        <div class="comment-element">
+                                            <span class="body-comment">Hello How are You</span>
+                                        </div>
+                                        <div class="comment-footer">
+                                            <div class="comment-arrow">
+                                                <i class="fa-solid fa-arrow-up comment-up" id="arrow-up"></i>
+                                                <span class="comment-span" id="arrow-span">100</span>
+                                                <i class='fas fa-arrow-down comment-down' id="arrow-down"></i>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="topic-icon">
-                                        <i class="fa fa-ellipsis"></i>
-                                    </div>
-                                </div>
-                                <div class="content">
-                                    <h4>I am Vengence, I am the Knight, I am Batman</h4>
-                                    <img src="./img/bat.jpg" alt="">
-                                </div>
-                                <div class="footer">
-                                    <div class="footer-content" id="footer-content2">
-                                        <i class="fa-solid fa-arrow-up" id="arrow-up2"></i>
-                                        <span class = "arrow-span" id="arrow-span2">50</span>
-                                        <i class='fas fa-arrow-down' id="arrow-down2"></i>
-                                    </div>
-                                </div>
-                            </div> -->
-                            <!-- <div class="headline">
-                                <div class="topic">
-                                    <div class="topic-body">
-                                        <span class="span-back">M</span>
-                                        <span class="topic-content">r/MaskMan</span>
-                                    </div>
-                                    <div class="topic-icon">
-                                        <i class="fa fa-ellipsis"></i>
-                                    </div>
-                                </div>
-                                <div class="content">
-                                    <h4>MaskMan</h4>
-                                    <img src="./img/pexels-photo-1097456 (1).jpg" alt="">
-                                </div>
-                                <div class="footer">
-                                    <div class="footer-content" id="footer-content3">
-                                        <i class="fa-solid fa-arrow-up" id="arrow-up3"></i>
-                                        <span class = "arrow-span" id="arrow-span3">0</span>
-                                        <i class='fas fa-arrow-down' id="arrow-down3"></i>
-                                    </div>
-                                </div>
-                            </div> -->
-                            <!-- <div class="headline">
-                                <div class="topic">
-                                    <div class="topic-body">
-                                        <span class="span-back">N</span>
-                                        <span class="topic-content">r/Naruto</span>
-                                    </div>
-                                    <div class="topic-icon">
-                                        <i class="fa fa-ellipsis"></i>
-                                    </div>
-                                </div>
-                                <div class="content">
-                                    <h4>I will get Sasuke Back.</h4>
-                                    <img src="./img/naruto.jpg" alt="">
-                                </div>
-                                <div class="footer">
-                                    <div class="footer-content" id="footer-content4">
-                                        <i class="fa-solid fa-arrow-up" id="arrow-up4"></i>
-                                        <span class = "arrow-span" id="arrow-span4">70</span>
-                                        <i class='fas fa-arrow-down' id="arrow-down4"></i>
-                                    </div>
+                                    
+                                    
                                 </div>
                             </div> -->
                         </div>
                     </div>
-
                 </div>
 
                 <div class="history">
@@ -260,11 +199,11 @@
 </body>
 <script type ="module" src="./js/script.js"></script>
 <script type="module" src="./js/element.js"></script>
-<script type="module" src="./js/id.js"></script>
 <script type="module" src="./js/users.js"></script>
 <script type="module" src="./js/displayreddit.js"></script>
 <script type="module" src="./js/feeds-data.js"></script>
-<script type="module" src="./js/comment/comment.js"></script>
+<script type="module" src="./js/save.js"></script>
+<script type="module" src="./js/history.js"></script>
 <script type="module" src="../../assests/js/loader.js"></script>
 <script type="module" src="../../assests/js/toast.js"></script>
 </html>

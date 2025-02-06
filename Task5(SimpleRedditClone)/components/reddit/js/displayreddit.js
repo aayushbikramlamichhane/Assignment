@@ -1,12 +1,16 @@
 import { feedsData } from "./feeds-data.js";
 import { createDiv, createSpan, createI } from "./element.js";
-import { storedComment } from "./comment/storage.js";
+import { handleArrowDown, handleArrowUp, displayComment } from "./script.js";
 
+import { commentDisplayInput } from "./comment-input.js";
+import { paintCommentSection } from "./paintCommentSection.js";
 const mainFeeds = document.querySelector(".main-feeds");
 
 feedsData.forEach((item) => {
+  const itemID = item.id;
   const headline = createDiv();
   headline.className = "headline";
+  headline.id = `feed-item-${item.id}`;
   mainFeeds.appendChild(headline);
 
   const topic = createDiv();
@@ -51,7 +55,7 @@ feedsData.forEach((item) => {
   footer.appendChild(footerContent);
 
   const arrowUp = createI();
-  arrowUp.classList.add("fa-solid", "fa-arrow-up","arrow-up");
+  arrowUp.classList.add("fa-solid", "fa-arrow-up", "arrow-up");
   footerContent.appendChild(arrowUp);
 
   const arrowSpan = createSpan();
@@ -60,11 +64,12 @@ feedsData.forEach((item) => {
   footerContent.appendChild(arrowSpan);
 
   const arrowDown = createI();
-  arrowDown.classList.add("fa-solid", "fa-arrow-down","arrow-down");
+  arrowDown.classList.add("fa-solid", "fa-arrow-down", "arrow-down");
   footerContent.appendChild(arrowDown);
 
   const commentContent = createDiv();
   commentContent.className = "comment-content";
+  commentContent.id = `comment-content-${itemID}`;
   footer.appendChild(commentContent);
 
   const commentIcon = createI();
@@ -73,62 +78,27 @@ feedsData.forEach((item) => {
 
   const commentCount = createSpan();
   commentCount.className = "comment-count";
-  commentCount.textContent = `${storedComment.length}`;
+  commentCount.id = `comment-count-${itemID}`;
+  commentCount.textContent = item.commentCount;
   commentContent.appendChild(commentCount);
 
-  arrowDown.addEventListener("click", () => {
-    let count = parseInt(arrowSpan.textContent);
-    switch (true) {
-      case arrowDown.style.color == "white":
-        arrowDown.style.color = "black";
-        arrowSpan.textContent = count + 1;
-        arrowSpan.style.color = "black";
-        footerContent.style.background = "rgb(228, 234, 238)";
-        break;
-      case arrowUp.style.color == "white":
-        arrowUp.style.color = "black";
-        arrowDown.style.color = "white";
-        footerContent.style.background = "blue";
-        arrowSpan.textContent = count - 2;
-        break;
-      default:
-        arrowDown.style.color = "white";
-        arrowSpan.textContent = count - 1;
-        arrowSpan.style.color = "white";
-        footerContent.style.background = "blue";
-        break;
-    }
-  });
+  handleArrowDown(arrowUp, arrowDown, arrowSpan, footerContent);
+  handleArrowUp(arrowUp, arrowDown, arrowSpan, footerContent);
 
-  arrowUp.addEventListener("click", () => {
-    let count = parseInt(arrowSpan.textContent);
-    // console.log(count);
-    switch (true) {
-      case arrowUp.style.color == "white":
-        arrowUp.style.color = "black";
-        arrowSpan.textContent = count - 1;
-        arrowSpan.style.color = "black";
-        footerContent.style.background = "rgb(228, 234, 238)";
-        break;
+  const commentContainer = createDiv();
+  commentContainer.className = "comment-container";
+  headline.appendChild(commentContainer);
 
-      case arrowDown.style.color == "white":
-        arrowDown.style.color = "black";
-        arrowUp.style.color = "white";
-        arrowSpan.textContent = count + 2;
-        footerContent.style.background = "red";
-        break;
+  displayComment(commentContent, commentContainer);
 
-      default:
-        arrowUp.style.color = "white";
-        arrowSpan.textContent = count + 1;
-        arrowSpan.style.color = "white";
-        footerContent.style.background = "red";
-        break;
-    }
-  });
+  const itemComment = item.comment;
+  commentDisplayInput(commentContainer, itemID, commentContent);
 
-  commentContent.addEventListener("click", () => {
-    window.location.href = "../../../components/reddit/comment.html";
-  });
+  const commentSectionContainer = createDiv();
+  commentSectionContainer.className = "comment-section";
+  commentSectionContainer.id = `comment-section${itemID}`;
+  commentContainer.appendChild(commentSectionContainer);
 
+
+  paintCommentSection(commentSectionContainer, itemComment);
 });

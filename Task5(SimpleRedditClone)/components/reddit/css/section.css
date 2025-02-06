@@ -59,15 +59,13 @@
     cursor: pointer;
     background: rgb(228, 234, 238)
 }
-/* .feed:hover{
-    background: rgb(228, 234, 238);
-} */
 
 .footer{
     margin-top: 3px;
     width: 100%;
     display: flex;
     gap: 25px;
+    padding-bottom: 10px;
 }
 
 .footer-content{

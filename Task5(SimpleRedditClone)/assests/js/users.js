@@ -10,5 +10,8 @@ export const users = [
     },
     {
         email: "rajanthapa@gmail.com", password: '1234567'
+    },
+    {
+        email: "ayuradhikari@gmail.com", password: '123456789'
     }
 ]

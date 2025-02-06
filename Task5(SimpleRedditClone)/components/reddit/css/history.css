@@ -79,3 +79,7 @@
     display: flex;
     gap: 3px;
 }
+
+.clear{
+    cursor: pointer;
+}

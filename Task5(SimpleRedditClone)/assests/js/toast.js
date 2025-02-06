@@ -8,6 +8,8 @@ const iconDanger = document.getElementById("icon-danger");
  * message should be string
  * @param {message: string } 
  */
+
+
 export function displayToast(title, message,valid) {
     mainToast.style.display = "flex";
     span1.innerHTML = title;
@@ -31,6 +33,5 @@ export function hideToast() {
 export function crossHit() {
     iconCross.addEventListener("click", () => {
         window.location.href = "../../components/login/login.html";
-        // console.log("hitted");
     })
 }

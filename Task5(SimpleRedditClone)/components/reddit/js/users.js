@@ -1,6 +1,6 @@
 import { loaderDisplay, loaderHide } from "../../../assests/js/loader.js";
 
-import { displayToast, hideToast, crossHit } from "../../../assests/js/toast.js";
+import { displayToast} from "../../../assests/js/toast.js";
 
 const userBox = document.querySelector(".user-box");
 const userFirstLetter = document.querySelector(".user-first");

@@ -8,18 +8,13 @@ import {
   passwordError,
 } from "/assests/js/variable.js";
 
-
 import { loaderDisplay, loaderHide } from "../../assests/js/loader.js";
 
-import {
-  displayToast,
-  hideToast,
-  crossHit,
-} from "../../assests/js/toast.js";
+import { displayToast, hideToast, crossHit } from "../../assests/js/toast.js";
 
 const eyeIcon = document.getElementById("eye-icon");
 const container1 = getQuerySelection(".container1");
-const containerMain = document.querySelector(".main");;
+const containerMain = document.querySelector(".main");
 
 function getQuerySelection(key) {
   return document.querySelector(key);
@@ -32,7 +27,7 @@ signInButton.addEventListener("click", () => {
   let isValid = true;
   function setInvalidToast(message) {
     isValid = false;
-    
+
     displayToast("ERROR!", message, false);
     crossHit();
     setTimeout(() => {
@@ -41,7 +36,11 @@ signInButton.addEventListener("click", () => {
   }
 
   if (!emailInput || !emailRegex.test(emailInput)) {
-    emailError.innerHTML = "Invalid Email";
+    if (!emailInput) {
+      emailError.innerHTML = "Email cannot be empty";
+    } else {
+      emailError.innerHTML = "Invalid Email";
+    }
     const errorMessage = "Enter Valid Email";
     setInvalidToast(errorMessage);
   } else {
@@ -49,21 +48,29 @@ signInButton.addEventListener("click", () => {
   }
 
   if (!passwordInput || passwordInput.length < 6) {
-    passwordError.innerHTML = "Invalid Password";
+    if (!passwordInput) {
+      passwordError.innerHTML = "Password cannot be empty";
+    } else {
+      passwordError.innerHTML = "Invalid Password";
+    }
     const errorMessage = "Invalid Email or Password";
+
     setInvalidToast(errorMessage);
   } else {
     passwordError.innerHTML = "";
   }
   if (isValid) {
-    const authorizedUser = users.find((item) =>  item.email == emailInput && item.password == passwordInput)
-    if(authorizedUser )
-    {
+    const authorizedUser = users.find(
+      (item) => item.email == emailInput && item.password == passwordInput
+    );
+    if (authorizedUser) {
       loaderDisplay();
       container1.style.display = "none";
       containerMain.style.display = "none";
-      sessionStorage.setItem("user", JSON.stringify({ user: inputEmail.value }));
-      // console.log("hitted");
+      sessionStorage.setItem(
+        "user",
+        JSON.stringify({ user: inputEmail.value })
+      );
       crossHit();
       setTimeout(() => {
         let user = sessionStorage.getItem("user")
@@ -74,33 +81,30 @@ signInButton.addEventListener("click", () => {
 
         const index = userName.indexOf("@");
         const firstName = userName.slice(0, index);
-        const capitalName = firstName.charAt(0).toUpperCase() + firstName.slice(1)
+        const capitalName =
+          firstName.charAt(0).toUpperCase() + firstName.slice(1);
         console.log(capitalName);
 
-        
         loaderHide();
         const message = `Welcome, ${capitalName}`;
         displayToast("SUCCESS!", message, true);
         // console.log("Hello");
-        
+
         setTimeout(() => {
-          window.location ="/components/reddit/reddit.html";
+          window.location = "/components/reddit/reddit.html";
         }, 1000);
       }, 2000);
-      
     } else {
-      displayToast("ERROR!","No User Found", false);
-      
+      displayToast("ERROR!", "No User Found", false);
+
       // console.log(emailInput, passwordInput);
       setTimeout(() => {
         hideToast();
         crossHit();
-      },3000)
+      }, 3000);
     }
   }
 });
-
-
 
 inputEmail.addEventListener("input", (e) => {
   if (emailRegex.test(inputEmail.value)) {
