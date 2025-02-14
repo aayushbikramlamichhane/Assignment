@@ -42,6 +42,7 @@ feedsData.forEach((item) => {
 
   const contentImg = document.createElement("img");
   contentImg.className = "content-img";
+  contentImg.loading = "lazy";
   contentImg.src = item.img;
   content.appendChild(contentImg);
 
